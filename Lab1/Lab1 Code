@@ -7,9 +7,9 @@ namespace Inclass1
         static void Main(string[] args)
         {
             string userInput;
-            Console.Write("What is your name?\n" );
+            Console.Write("What is your name?\n" ); \\asks for your name, just because I was curious
                 userInput = Console.ReadLine();
-            Console.WriteLine("Hello World From {0}!", userInput);
+            Console.WriteLine("Hello World From {0}!", userInput); \\prints 'Hello World from [User input]!, for me its Hello World from Andrew!
         }
     }
 }
