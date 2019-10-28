@@ -1,13 +1,15 @@
 using System;
 
-namespace Lab1
+namespace Inclass1
 {
-
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      Console.Writeline("Hello World from Andrew!");
-      }
-  }
+        static void Main(string[] args)
+        {
+            string userInput;
+            Console.Write("What is your name?\n" );
+                userInput = Console.ReadLine();
+            Console.WriteLine("Hello World From {0}!", userInput);
+        }
+    }
 }
