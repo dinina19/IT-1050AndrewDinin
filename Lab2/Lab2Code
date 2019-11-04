@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!\nFrom Andrew Dinin");
+            Console.WriteLine("Hello World!     From Andrew Dinin");
+            int Value1;
+            int Value2;
+            Console.WriteLine("Please Enter a value: ");
+            string Middle1 = Console.ReadLine();
+            Value1 = Convert.ToInt32(Middle1);
+            Console.WriteLine("Please Enter a second value: ");
+            string Middle2 = Console.ReadLine();
+            Value2 = Convert.ToInt32(Middle2);
+            Console.WriteLine("The product of {0} and {1} is {2}.", Value1, Value2, Value1 * Value2);
+        }
+    }
+}// a.) The Main(string[] args) is the entry point to the application.
+ // b.) The difference between an integer varible and a floating point variable is that integers do not store decimal places while
+ //  floating-point/ double do.
+ // c.) An example of a method in chapter 4 is static.void Main()
+ // d.)	Like we have types double and int, we can create our own custom types using Classes.
+ //  Each class has variables called instance variables or class members.  To read the value of an instance variable, we create method called a get accessor.
+ //  To assign a value ton instance variable, we use a method called a set accessor.
+ // e.) The difference between a class and an object is that classes are like templates and help define objects and the objects are names that hold and store data.
+ // you can only create a class once, however an infinite amount of objects ca
