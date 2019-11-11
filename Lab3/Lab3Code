@@ -1,0 +1,115 @@
+using System;
+
+namespace lab3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int speedLimit = 35;
+            //int speed = 42; from initial part 1
+            bool isTrue;
+            //if (speed > speedLimit)
+            Console.WriteLine("Type any number:  ");//Speed input
+            string Input = Console.ReadLine();
+            int speedInput;
+            if (int.TryParse(Input, out speedInput))//Checking to see if it is a number
+            {
+                isTrue = (speedInput < speedLimit);//checking to see if it over the speed limit
+                if (isTrue == false)
+                {
+                    Console.WriteLine("SLOW NOW\n It is False!"); //it is over the speed limit
+                }
+                else
+                    Console.WriteLine("OKAY SPEED\n It is True!"); // it is under the speed limit
+            }
+            else
+            {
+                Console.WriteLine("Please enter a number"); //saying to enter a proper number
+            }
+            //seperation to temperature calculation
+            //---------------------------------------------------------------------------------------------------------------------------------------------------
+            //
+            Console.WriteLine("\n[TEMPERATURE CALCULATION]");
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three second pause to allow reading the output
+            Console.WriteLine("Please enter a temperature in Fahrenheit: "); // input for fahrenheit number
+            string initTemp = Console.ReadLine();
+            int TempFahren;
+            bool TempComparison;
+            bool TempComparison2;
+            int TempCelsius;
+            if (int.TryParse(initTemp, out TempFahren)) //Checking to see if it is a number
+            {
+                TempComparison = (40 < TempFahren && TempFahren < 90);//Checking if the number needs a "it is hot" or "it is cold"
+                if (TempComparison == true)
+                {
+                    TempCelsius = (TempFahren - 32) * 5 / 9;
+                    Console.WriteLine("The Temperature is {0} °F or {1} °C", TempFahren, TempCelsius);
+                }
+                else
+                {
+                    TempComparison2 = (40 > TempFahren);//Seeing which of one of the "it is hot" or "it is cold" is needed
+                    if (TempComparison2 == true)
+                    {
+                        TempCelsius = (TempFahren - 32) * 5 / 9;
+                        Console.WriteLine("The Temperature is {0} °F or {1} °C", TempFahren, TempCelsius);
+                        Console.WriteLine("IT IS COLD");
+                    }
+                    else
+                    {
+                        TempCelsius = (TempFahren - 32) * 5 / 9;
+                        Console.WriteLine("The Temperature is {0} °F or {1} °C", TempFahren, TempCelsius);
+                        Console.WriteLine("IT IS HOT");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Please enter a number");// telling the user to enter a number
+            }
+            //Seperation for  loops
+            //---------------------------------------------------------------------------------------------------------------------------------------------------
+            //
+            Console.WriteLine("\n[FIRST LOOP]");
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three Second Pause to allow time to read the output
+            int i = 0;
+            while (i <= 10)
+            {
+                Console.Write("While statement #1 ");
+                // Write the index to the screen.
+                Console.WriteLine(i);
+                // Increment the variable.
+                i = i + 1;
+
+            }
+            Console.WriteLine("\n[SECOND LOOP]");
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three Second pause to allow time to read the output
+            i = 60;
+            while (i >= 20)
+            {
+                Console.Write("While statement #2 ");
+                Console.WriteLine(i);
+                // Increment the variable.
+                i = i - 5;
+            }
+            Console.WriteLine("\n[THIRD LOOP]");
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three Second pause to allow time to read the output
+            i = 10;
+            while (i <= 20)
+            {
+                Console.Write("While statement #3 ");
+                Console.WriteLine(i);
+                // Increment the variable.
+                i = i + 2;
+            }
+        }
+    }
+}
+
+/* the if and while statements are similar to one another as they allow you to control the flow of your code based on inputs.
+this allows you to repeat or skip over entire sections of your code that arent needed, such as telling someone they are speeding when they arent,
+or allowing a section to repeat, like the tick up counters
+
+    the statements are also different from one another as an if statement can not cause a statement to be repeated on its own, since it is only a
+    conditional statement and not a loop. the While loop, on the other hand, can act as a conditional statement by having multiple while loops within one another to filter.
+*/    
