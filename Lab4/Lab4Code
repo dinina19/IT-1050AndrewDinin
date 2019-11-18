@@ -1,63 +1,86 @@
 using System;
 
-namespace lab4
+namespace ConsoleApp2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            while (i < 101)
+            /*
+            Question 2: The four basic elements of counter controlled repitition are 
+            Counter Variable
+            initial value for counter
+            the increment of change
+            the loop-continuation condition
+
+            Question 3: 
+            While: the loop has a condition that is checked and will execute the program until the
+            condition remains true. This is different from a For loop as it does not have a defined number
+            of times it will run, and could not run at all if the user input does not match the requirements.
+            For: the loop has a condition that tells the program to run a defined number of times.
+            This is different from a While loop because it is unable to run an infinite amount of times, as
+            the number of run times must be specified, unless a infinite loop is coded. Also, it is unable to
+            break out of the loop unless a specific function happens or the set number of runtimes is met.
+
+            Question 4: 
+            A time you would want use a Do-While instead of a while would be if you want to have a menu
+            that will be accessed multiple times, you will want a do-while to review what the user has entered.
+            The program will then run one final time when the user presses exit.
+            */
+            //*******************problem 5*******************
+            int Part1 = 1;
+            while (Part1 <= 100)
             {
-                if ((i % 2) == 0)
+                if ((Part1 % 2) == 0)
                 {
-                    Console.WriteLine("{0} is Even", i);
-                    i = i + 1;
-                    //System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1)); // One second pause to allow reading the output
+                    Console.WriteLine("{0} is Even",Part1);
+                    Part1 = (Part1 + 1);
                 }
-                if ((((i + 1) % 2) == 0) && i < 100)
+                else if (((Part1 + 1) % 2) == 0)
                 {
-                    Console.WriteLine("{0} is Odd", i);
-                    i = i + 1;
-                    //System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1)); // One second pause to allow reading the output
+                    Console.WriteLine("{0} is Odd",Part1);
+                    Part1 = (Part1 + 1);
                 }
+                else
+                    break;
             }
+            //*******************problem 6*******************
+            Console.WriteLine("\n\n-----[PART 6]-----");
             System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three second pause to allow reading the output
-            Console.WriteLine("\n[USER INPUT]");
-            Console.WriteLine("Please enter a temperature: "); // input for temperature
-            string initTemp = Console.ReadLine();
-            int temp;
-            if (int.TryParse(initTemp, out temp)) //Checking to see if it is a number
+            Console.WriteLine("Please enter a temperature:");
+            String TemperatureInput = Console.ReadLine();
+            int Temperature;
+            if (int.TryParse(TemperatureInput, out Temperature))//Checking to see if it is a number
             {
-                if (temp < 10)
+                if (Temperature < 10)
                 {
                     Console.WriteLine("Polar Bear");
                 }
-                if (temp < 20)
+                else if (Temperature < 20)
                 {
                     Console.WriteLine("Penguin");
                 }
-                if (20<= temp && temp < 40)
+                else if (Temperature < 40)
                 {
                     Console.WriteLine("Moose");
                 }
-                if (40 <= temp && temp < 50)
+                else if (Temperature < 50)
                 {
                     Console.WriteLine("Reindeer");
                 }
-                if (50 <= temp && temp < 60)
+                else if (Temperature < 60)
                 {
                     Console.WriteLine("Deer");
                 }
-                if (60 <= temp && temp < 70)
+                else if (Temperature < 70)
                 {
                     Console.WriteLine("Turtle");
                 }
-                if (70 <= temp && temp < 80)
+                else if (Temperature < 80)
                 {
                     Console.WriteLine("Lion");
                 }
-                if (80 <= temp && temp < 90)
+                else if (Temperature < 90)
                 {
                     Console.WriteLine("Fish");
                 }
@@ -68,8 +91,28 @@ namespace lab4
             }
             else
             {
-                Console.WriteLine("Please enter a number");
+                Console.WriteLine("Please Enter A Number");
             }
+            //*******************problem 7******************
+            Console.WriteLine("\n\n-----[PART 7]-----");
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three second pause to allow reading the output
+            int i = 10;
+            while (i <= 20)
+            {
+                Console.WriteLine("{0}", i);
+                i = i + 1;
+            }
+            //*******************problem 8******************
+            Console.WriteLine("\n\n-----[PART 8]-----");
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3)); // Three second pause to allow reading the output
+            int Problem8 = 0;
+            while (Problem8 < 101)
+            {
+                Console.WriteLine(Problem8);
+                Console.WriteLine("********");
+                Problem8++;
+            }
+
         }
     }
 }
